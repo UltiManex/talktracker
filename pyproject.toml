@@ -1,0 +1,20 @@
+[project]
+name = "u-talk-too-much"
+version = "0.1.0"
+description = "Speaker-aware conversation analytics app"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "streamlit>=1.35.0",
+  "pandas>=2.2.0",
+  "plotly>=5.22.0",
+  "faster-whisper>=1.0.3",
+]
+
+[project.optional-dependencies]
+ml = [
+  "pyannote.audio>=3.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
